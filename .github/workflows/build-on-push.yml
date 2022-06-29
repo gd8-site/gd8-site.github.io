@@ -29,6 +29,14 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - name: Copy & Rename Folder
-        working-directory: /usr
+        working-directory: /usr/src
+        run: |
+          ls
+      - name: Copy & Rename Folder
+        working-directory: /usr/local
+        run: |
+          ls
+      - name: Copy & Rename Folder
+        working-directory: /usr/bin
         run: |
           ls
