@@ -32,10 +32,10 @@ jobs:
       - name: Copy
         uses: andstor/copycat-action@v3
         with:
-          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          personal_token: ${{ secrets.API_TOKEN_GITHUB }}
           src_path: ./public
           dst_path: ./
-          dst_owner: gd8-sites
+          dst_owner: gd8-site
           dst_repo_name: gd8-site.github.io
           src_branch: main
           dst_branch: gh-pages
