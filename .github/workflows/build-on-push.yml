@@ -30,4 +30,4 @@ jobs:
     steps:
       - name: Copy & Rename Folder
         run: |
-          ls
+          /usr/bin/bash ls
