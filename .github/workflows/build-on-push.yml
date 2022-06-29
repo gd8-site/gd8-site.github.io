@@ -30,4 +30,4 @@ jobs:
     steps:
       - name: Copy & Rename Folder
         run: |
-          mv public docs
+          mv public/ docs/
