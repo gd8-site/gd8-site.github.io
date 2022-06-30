@@ -29,6 +29,6 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - name: Copy & Rename
-        run: mv public docs 
+        run: cp public docs 
  
 
