@@ -29,10 +29,6 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - name: Copy & Rename Folder
-        working-directory: /usr/bin
-        run: |
-          ls
-      - name: Copy & Rename Folder
-        working-directory: /usr/bin/tempfile
+        working-directory: /usr/public
         run: |
           ls
