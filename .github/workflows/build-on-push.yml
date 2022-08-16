@@ -35,6 +35,12 @@ jobs:
         with:
           node-version: '14'
 
+      - name: Find and Replace http to https
+        uses: datamonsters/replace-action
+        with:
+          files: ./docs/*
+          replacements: 'http:=https:'
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
@@ -44,4 +50,4 @@ jobs:
           enable_jekyll: false
           cname: gd8.com.br
 
-      - run: find . -type f -exec sed -i 's+http://+https://+g' {} \
+      
