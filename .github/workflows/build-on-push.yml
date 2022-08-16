@@ -36,10 +36,11 @@ jobs:
           node-version: '14'
 
       - name: Find and Replace http to https
-        uses: datamonsters/replace-action
+        uses: mad9000/actions-find-and-replace-string@2
         with:
-          files: ./docs/*
-          replacements: 'http:=https:'
+          source: 'refs/heads/main'
+          find: 'http:/'        # we want to remove ref/heads/ from source 
+          replace: 'https:'  
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
