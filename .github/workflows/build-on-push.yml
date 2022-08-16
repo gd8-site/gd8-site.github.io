@@ -43,5 +43,5 @@ jobs:
           publish_dir: ./docs
           enable_jekyll: false
           cname: gd8.com.br
-          
-      - run: sed -i 's+http://+https://+g' docs/* 
+
+      - run: find . -type f -exec sed -i 's+http://+https://+g' {} \
